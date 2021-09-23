@@ -1,13 +1,16 @@
-spring:
-  cloud:
-    gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PATCH
-              - DELETE
-              - OPTIONS
+cloud:
+  gateway:
+    globalcors:
+      corsConfigurations:
+        '[/**]':
+          allowedOrigins: http://localhost:4200
+          allowCredentials: true
+          allowedHeaders:
+            - content-type
+            - token
+          allowedMethods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - OPTIONS
